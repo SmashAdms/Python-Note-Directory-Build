@@ -1,0 +1,14 @@
+#Import OS module
+import os
+#Define Function
+def main():
+    #Create criteria for Folder Directories and path directory    
+    folders = ['CyberSecurity-Notes']
+    subfolders = ['week 1', 'week 2', 'week 3', 'week 4', 'week 5', 'week 6', 'week 7', 'week 8', 'week 9', 'week 10', 'week 11', 'week 12', 'week 13', 'week 14', 'week 15', 'week 16', 'week 17', 'week 18', 'week 19', 'week 20', 'week 21', 'week 22', 'week 23', 'week 24']
+    leafs = ['Day 1', 'Day 2', 'Day 3']
+    paths = [os.path.join(folder, sub, leaf) for folder in folders for sub in subfolders for leaf in leafs]
+    #For loop for Paths
+    for path in paths:
+        os.makedirs(path)
+#Call the function
+main()
